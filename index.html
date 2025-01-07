@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>PLANET FITGYM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;400;700;800&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/9225169f93.js" crossorigin="anonymous"></script>
+	<meta name="description" content="Professionnelle de l'architecture d'intérieur : Jennifer Bru donnera une nouvelle vie à votre chez vous, en intégrant les lois du Vastu Shastra !">
+	<!-- Open Graph Meta-->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_FR">
+  	<meta property="og:language" content="fr">
+  	<meta property="og:title" content="Jennifer Bru | Architecte d'intérieur au Pays-Basque">
+  	<meta property="og:description"
+		content="Jennifer Bru donnera une nouvelle vie à votre chez vous">
+  	<meta property="og:url" content="https://bru-architecteinterieur.com/">
+  	<meta property="og:site_name" content="Jennifer Bru - Architecte d'intérieur">
+  	<meta property="og:image" content="https://bru-architecteintérieur.com/jennifer/FrontEnd/assets/icons/profil-jennifer.webp">
+	<!--Twitter Meta-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://bru-architecteinterieur.com" />
+	<meta name="twitter:creator" content="@jenniferbru" />
+	<meta name="twitter:title" content="Jennifer Bru | Architecte d'intérieur au Pays-Basque" />
+	<meta name="twitter:description" content="Jennifer Bru donnera une nouvelle vie à votre chez vous" />
+	<meta name="twitter:image" content="https://bru-architecteintérieur.com/jennifer/FrontEnd/assets/icons/profil-jennifer.webp" />
+</head>
+<body>
+<!-- Modal with aside-->
+<aside class="modal">
+	<div class="modalContainer" id="firstModal">
+		<div class="modalStopIcon">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<h2>Galerie photo</h2>
+		<div class="modalGallery">
+
+		</div>
+		<div class="modalLine"></div>
+		<button class="addWorkButton">Ajouter une photo</button>
+		<p class="deleteGallery">Supprimer la galerie</p>
+	</div>
+
+	<div class="modalContainer" id="secondModal">
+		<i class="fa-solid fa-arrow-left-long"></i>
+		<div class="modalStopIcon">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<h2>Ajout photo</h2>
+		<form action="#" id="modalForm" method="post">
+			<div class="pictureUpload">
+				<i class="fa-regular fa-image"></i>
+				<label for="image" class="labelWork">
+				<input type="file" name="image" id="image" accept=".jpg, .png">+ Ajouter photo</label>
+				<p class="uploadType">jpg, png : 4mo max</p>
+			</div>
+
+			<label for="title" class="labelDescription">Titre</label>
+			<input type="text" id="title" name="title">
+
+			<label for="category" class="labelDescription">Catégorie</label>
+			<select name="category" id="category">
+				<option value="" disabled selected hidden></option>
+				<option value="1">Rénovations maisons</option>
+				<option value="2">Extensions maisons</option>
+			</select>
+
+			<div class="modalLine"></div>
+
+			<button class="addWorkButton" type="submit" id="submit" name="submit">Valider</button>
+		</form>
+	</div>
+</aside>
+
+<header>
+	<div class="hamburger">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+	<div class="banner-container"></div>
+	<div class="logo">
+		<img src="./assets/icons/logo.png" alt="logo d'entreprise">
+	</div>
+		<nav>
+			<ul class="nav-links">
+				<li>
+					<a href="index.html" class="nav__link nav__link--active">Accueil</a>
+				</li>
+				<li>
+					<a href="a-propos.html" class="nav__link">Nos Activités</a>
+				</li>
+				<li>
+					<a href="projets.html" class="nav__link">Abonnements</a>
+				</li>
+				<li>
+					<a href="contact.html" class="nav__link">Contactez-nous</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="title-container">
+			<h1 class="banner-title"> PLANET <span class="title-styled">FITGYM</span></h1>
+		</div>
+		<div class="modal-button">
+			<a href="">PRÉINSCRIPTION <br>& essai</a>
+		</div>
+
+</header>
+
+<main>
+
+	<div id="introduction">
+			<h1>Architecte intérieure |<br> Pyrénées-Atlantiques</h1>
+			<div class="intro"><p>Jennifer Bru, l’architecte d’intérieur qui intègre les lois du Vastu Shastra au Pays-Basque.<br><br></p>
+			<p>Vous souhaitez vous sentir en symbiose avec votre lieu de vie ?<br>
+			Faites appel à l’architecte Jennifer Bru pour donner une nouvelle vie à votre chez vous !<br><br></p>
+			<p>Véritable passionnée, Jennifer appréhende chaque projet d’aménagement<br>
+			(Bureau, boutique, particulier) avec la même obsession : rester fidèle à la volonté et aux attentes de ses clients tout en soignant leurs lieux de vie.<br>
+			Constamment à l’écoute, cette créatrice pense, explore, révèle et singularise les intérieurs de ses clients en laissant libre court à ses influences et ses inspirations.</p>
+			</div>
+	</div>
+
+</main>
+
+<footer>
+	<div class="contact">
+		<p>40440, Ondres <br>
+		+33 6 27 83 87 14 <br>
+		bru.architecteinterieur@gmail.com</p>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="login.html" class="logInOut">login</a></li>
+			
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<script type="module" src="nav.js"></script>
+<script type="module" src="index.js"></script>
+<script type="module" src="loggedInterface.js"></script>
+<script type="module" src="modal.js"></script>
+<script type="module" src="slider.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>!-->
+</body>
+</html>
