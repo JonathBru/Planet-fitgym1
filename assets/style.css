@@ -401,10 +401,13 @@ nav li:hover {
 
 
 #introduction {
+	border-left: 2px solid #4CAF50; /* Bordure à gauche */
+	border-bottom: 2px solid #4CAF50; /* Bordure en bas */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 25em 8em;
+	padding-bottom: 20px;
 }
 
 #introduction p {
@@ -600,18 +603,30 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 	}
 }
 
-footer nav {
-	box-sizing: border-box;
-	background-color: #FFFFFF;
-}
-
-footer nav ul {
+.footer {
 	display: flex;
 	justify-content: space-between;
-	color: #000000;
-	margin-bottom: 0;
+	margin: 0 15vw 5em 15vw;
+}
+.footer h2 {
+	font-size: 30px;
+}
+.footer .title-styled {
+	font-size: 30px;
+}
+footer p {
+	font-size: 20px;
+}
+footer ul {
+	list-style-type: none;
+	padding-left: 0;
 }
 
+footer ul li {
+	font-size: 20px;
+	padding-bottom: 10px;
+	color: rgba(255, 255, 255, 0.751);
+}
 footer div p {
 	text-align: center;
 }
@@ -660,6 +675,12 @@ footer div p {
 
 #introduction figure .faOpen {
 	margin-left: 0;
+}
+.intro ul {
+	list-style-type: disc; /* Remet les puces rondes par défaut */
+            padding-left: 150px;
+			margin-top: 20px;
+			font-size: 18px;
 }
 
 /*"modifier" button for projects adds*/
