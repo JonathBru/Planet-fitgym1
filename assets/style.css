@@ -1288,6 +1288,15 @@ figure:hover .fig-2 {
 	font-size: 22px;
 }
 
+@media screen and (max-width:1300px) {
+	.tarifs-cards{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.tarif img {
+		width: 60vw;
+	}
+}
+
 .modalPro {
 	display: none; /* Cachez la modale par défaut */
 	position: fixed; /* Reste en position fixe même si vous faites défiler la page */
