@@ -1,4 +1,4 @@
-import {generateProjects} from "./index.js";
+
 
 //fonction pour ouvrir la modale et fermer la modale sur les boutons associés //
 async function openModal1() {

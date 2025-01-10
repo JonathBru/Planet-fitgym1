@@ -196,6 +196,14 @@ nav li:hover {
 	letter-spacing: 6.4px;
 }
 
+@media screen and (max-width: 600px) {
+	.banner-title {
+		font-size: 36px;
+	}
+	.title-styled {
+		font-size: 36px;
+	}
+}
 .modal-button {
 	display: flex;
 	flex-direction: column;
@@ -387,33 +395,50 @@ nav li:hover {
 }
 
 
+/* contact */
+
+.banner-container-contact {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	display: block;
+	z-index: -1;
+	background:url(./images/BannerContact.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	box-shadow: 24px -164px 150.3px 8px rgba(0, 0, 0, 0.504) inset, 0px 77px 55.6px 0px rgba(7, 7, 7, 0.69) inset;
+	filter: blur(0.25px) opacity(0.40);
+	width: 100%;
+	height:55em;
+}
 
 #contact {
 	display: flex;
-	margin:100px 10vw;
+	margin:45em 10vw 100px 10vw;
 	justify-content: center;
-	column-gap: 50px;
+	column-gap: 10vw;
 }
 
 .contactBlock {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
-	max-width: 30%;
-	margin-right: 30px;
+	
 }
 
 #contact h2 {
 	margin-bottom: 20px;
+	margin-top: 30px;
 }
 
 input::placeholder, textarea::placeholder {
 	font-size: 18px;
 }
 
-#contact form {
+#contact-form {
 	text-align: left;
-	margin-top:30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -421,22 +446,22 @@ input::placeholder, textarea::placeholder {
 	width: 100%;
 }
 
-#contact input, .loginInterface input {
+#contact-form input, .loginInterface input {
 	font-family: 'Archivo', sans-serif;
 	height: 50px;
 	font-size: 1.3em;
 	border: none;
 }
 
-#contact textarea {
+#contact-form textarea {
 	font-family: "Archivo", sans-serif;
 	font-size: 1.3em;
 	border: none;
 }
 
-#contact input, #contact textarea, .loginInterface input {
+#contact-form input, #contact-form textarea, .loginInterface input {
 	margin: 2em 0 2em 0;
-	max-width: 730px;
+	max-width: 530px;
 	width: 100%;
 }
 
@@ -444,8 +469,8 @@ input[type="submit"] {
 	align-self: center;
 	font-family: 'Archivo';
 	font-weight: 700;
-	color: #000000;
-	background-color: #dedede;
+	color: #fff;
+	background-color: #5271FF;
 	width: 180px !important;
 	text-align: center;
 	border-radius: 1px ;
@@ -453,12 +478,19 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover, button[type="submit"]:hover {
-	background-color: #000000;
+	background-color: #7ED957;
 	color: #FFFFFF;
 	transform: scale(1.05);
 	cursor: pointer;
-	box-shadow: 0 2px 15px 0 rgba(208, 211, 219, 0.8);
 }
+
+label {
+	color: white;
+	font-size: 20px;
+}
+
+
+
 
 
 .contact p {
@@ -466,11 +498,26 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
+.hour {
+	color: #5271FF;
+}
+
+.accueil {
+	color: #7ED957;
+}
+
+#contact h2 {
+	font-weight: 900;
+}
+
+.contact-button {
+	margin-bottom: 100px;
+}
 
 @media screen and (max-width: 1050px) {
 	#contact {
 		flex-direction: column;
-		margin: 100px 20px;
+		margin: 45em 20px 100px 20px;
 	}
 	.contactBlock {
 		justify-content: center;
@@ -478,9 +525,18 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 		max-width: 100%;
 		width: 100%;
 		margin-right: 0;
+		padding-bottom: 20px;
+		border-bottom: 2px solid #5271FF;
 	}
 	.contactBlock p {
 		font-size: 16px;
+	}
+	.contact-form {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 }
 
@@ -507,6 +563,15 @@ footer ul li {
 	font-size: 20px;
 	padding-bottom: 10px;
 	color: rgba(255, 255, 255, 0.751);
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+footer ul li a:hover {
+	color: #7ED957;
 }
 footer div p {
 	text-align: center;
@@ -621,7 +686,7 @@ footer div p {
 	left: 0;
 	width: 100vw;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(78, 78, 78, 0.242);
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -634,7 +699,7 @@ footer div p {
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 10px;
-	background-color: #FFFFFF;
+	background-color: black;
 	padding: 30px;
 }
 
@@ -645,9 +710,11 @@ footer div p {
 }
 
 .fa-xmark {
+	color: white;
 	font-size: 20px;
 	cursor: pointer;
 }
+
 
 .modalContainer h2 {
 	font-family: "Work Sans";
@@ -1201,6 +1268,22 @@ figure:hover .fig-2 {
 }
 
 /*tarif*/
+.background-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: -999;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 50px -10px 150.3px 100px rgba(0, 0, 0, 0.504) inset, 0px 77px 55.6px 0px rgba(7, 7, 7, 0.69) inset;
+	filter: blur(0.15px) opacity(0.35);
+	width: 100%;
+	height: 100vh;
+	background-image: url(./images/Banner1.jpg);
+}
 .title-tarif {
 	display: flex;
 	flex-direction: column;
@@ -1293,9 +1376,10 @@ figure:hover .fig-2 {
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.tarif img {
-		width: 60vw;
+		width: 80vw;
 	}
 }
+
 
 .modalPro {
 	display: none; /* Cachez la modale par défaut */
