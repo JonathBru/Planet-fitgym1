@@ -52,36 +52,6 @@
 			<input type="submit" value="Envoyer">
 		</form>
 	</div>
-
-	<div class="modalContainer" id="secondModal">
-		<i class="fa-solid fa-arrow-left-long"></i>
-		<div class="modalStopIcon">
-			<i class="fa-solid fa-xmark"></i>
-		</div>
-		<h2>Ajout photo</h2>
-		<form action="#" id="modalForm" method="post">
-			<div class="pictureUpload">
-				<i class="fa-regular fa-image"></i>
-				<label for="image" class="labelWork">
-				<input type="file" name="image" id="image" accept=".jpg, .png">+ Ajouter photo</label>
-				<p class="uploadType">jpg, png : 4mo max</p>
-			</div>
-
-			<label for="title" class="labelDescription">Titre</label>
-			<input type="text" id="title" name="title">
-
-			<label for="category" class="labelDescription">Catégorie</label>
-			<select name="category" id="category">
-				<option value="" disabled selected hidden></option>
-				<option value="1">Rénovations maisons</option>
-				<option value="2">Extensions maisons</option>
-			</select>
-
-			<div class="modalLine"></div>
-
-			<button class="addWorkButton" type="submit" id="submit" name="submit">Valider</button>
-		</form>
-	</div>
 </aside>
 
 <header>
@@ -90,11 +60,11 @@
 		<div class="line2"></div>
 		<div class="line3"></div>
 	</div>
+	<div class="logo">
+		<img src="./assets/icons/logo.png" alt="logo d'entreprise">
+	</div>
 	<div class="banner-container"></div>
 	<nav>
-		<div class="logo">
-			<img src="./assets/icons/logo.png" alt="logo d'entreprise">
-		</div>
 			<nav>
 				<ul class="nav-links">
 					<li>
@@ -118,6 +88,7 @@
 		<div class="modal-button">
 			<a href="#firstModal" id="modalOpener">PRÉINSCRIPTION <br>& essai</a>
 		</div>
+		<h2 class="univers">VOTRE UNIVERS FORME ET SANTE</h2>
 
 </header>
 
@@ -167,10 +138,7 @@
 	</div>
 </footer>
 <script type="module" src="nav.js"></script>
-<script type="module" src="index.js"></script>
-<script type="module" src="loggedInterface.js"></script>
 <script type="module" src="modal.js"></script>
-<script type="module" src="slider.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>!-->
 </body>
 </html>
