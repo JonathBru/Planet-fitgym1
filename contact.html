@@ -11,6 +11,9 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="https://kit.fontawesome.com/9225169f93.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="module" src="emailjs-script.js"></script>
 </head>
 
 <body>
@@ -20,19 +23,18 @@
             <div class="modalStopIcon">
                 <i class="fa-solid fa-xmark"></i>
             </div>
-            <h2></h2>
-            <form  method="POST" id="contact-form" action="https://formspree.io/f/mqkrbpyj">
-                <input type="text" name="name" id="name" placeholder="Nom">
-                <input type="tel" name="telNo" id="telNo" placeholder="Prénom">
-                <input type="email" name="email" id="email" placeholder="email">
-                <input type="text" name="postalCode" id="postalCode" placeholder="Date de Naissance">
-
-                    <input type="checkbox" name="trialSession" id="trialSession" value="Yes">
-                    <label for="trialSession">Je souhaite me pré-inscrire</label>
+            <form id="contact-form">
+                <input type="text" name="name" id="name" placeholder="Nom et Prénom" autocomplete="name">
+                <input type="tel" name="telNo" id="telNo" placeholder="06 12 34 56 78" autocomplete="tel">
+                <input type="email" name="email" id="email" placeholder="email" autocomplete="email">
+                <input type="text" name="birthdate" id="birthdate" placeholder="Date de naissance (jj/mm/aaaa)">
+    
+                    <input type="checkbox" name="inscription" id="inscription" value="Oui">
+                    <label for="inscription">Je souhaite me pré-inscrire</label>
                 
-                    <input type="checkbox" name="trialSession" id="trialSession" value="Yes">
+                    <input type="checkbox" name="trialSession" id="trialSession" value="Oui">
                     <label for="trialSession">Je souhaite une séance d'essai</label>
-
+    
                 <input type="submit" value="Envoyer">
             </form>
         </div>
@@ -115,8 +117,14 @@
                                 <a href="contact.html" class="nav__link">Contactez-nous</a>
                             </li>
                         </ul>
-                </div>
-                    
+                        <div class="social-container">
+                            <a href="https://www.instagram.com/planetfitgym_castres/"><img src="./assets/icons/inconInsta.png" alt=""></a>
+                            <a href="https://www.facebook.com/PlanetFitGymCastres"><img src="./assets/icons/iconFb.png" alt=""></a>
+                        </div>
+                </div>    
+        </div>
+        <div class="mention">
+            <a href="">mentions légales</a>
         </div>
     </footer>
 <script type="module" src="nav.js"></script>

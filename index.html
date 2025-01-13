@@ -10,24 +10,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;400;700;800&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="https://kit.fontawesome.com/9225169f93.js" crossorigin="anonymous"></script>
-	<meta name="description" content="Professionnelle de l'architecture d'intérieur : Jennifer Bru donnera une nouvelle vie à votre chez vous, en intégrant les lois du Vastu Shastra !">
+	<meta name="description" content="Véritable temple de remise en forme, chez PLANET FIT GYM venez profiter des meilleures installations pour parfaire votre santé et votre condition physique.">
 	<!-- Open Graph Meta-->
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="fr_FR">
   	<meta property="og:language" content="fr">
-  	<meta property="og:title" content="Jennifer Bru | Architecte d'intérieur au Pays-Basque">
+  	<meta property="og:title" content="PLANET FIT GYM | Salle de sport/musculation à Castres">
   	<meta property="og:description"
-		content="Jennifer Bru donnera une nouvelle vie à votre chez vous">
-  	<meta property="og:url" content="https://bru-architecteinterieur.com/">
-  	<meta property="og:site_name" content="Jennifer Bru - Architecte d'intérieur">
-  	<meta property="og:image" content="https://bru-architecteintérieur.com/jennifer/FrontEnd/assets/icons/profil-jennifer.webp">
+		content="Venez forger une santé et un physique de fer chez PLANET FIT GYM">
+  	<meta property="og:url" content="https://planetfitgym.fr/">
+  	<meta property="og:site_name" content="PLANET FIT GYM">
+  	<meta property="og:image" content="">
 	<!--Twitter Meta-->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="https://bru-architecteinterieur.com" />
-	<meta name="twitter:creator" content="@jenniferbru" />
-	<meta name="twitter:title" content="Jennifer Bru | Architecte d'intérieur au Pays-Basque" />
-	<meta name="twitter:description" content="Jennifer Bru donnera une nouvelle vie à votre chez vous" />
-	<meta name="twitter:image" content="https://bru-architecteintérieur.com/jennifer/FrontEnd/assets/icons/profil-jennifer.webp" />
+	<meta name="twitter:site" content="https://planetfitgym.fr" />
+	<meta name="twitter:creator" content="@Planet FitGym Castres" />
+	<meta name="twitter:title" content="PLANET FIT GYM | Salle de sport/musculation à Castres" />
+	<meta name="twitter:description" content="Venez forger une santé et un physique de fer chez PLANET FIT GYM" />
+	<meta name="twitter:image" content="" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="module" src="emailjs-script.js"></script>
 </head>
 <body>
 <!-- Modal with aside-->
@@ -36,17 +39,16 @@
 		<div class="modalStopIcon">
 			<i class="fa-solid fa-xmark"></i>
 		</div>
-		<h2></h2>
-		<form  method="POST" id="contact-form" action="https://formspree.io/f/mqkrbpyj">
-			<input type="text" name="name" id="name" placeholder="Nom">
-			<input type="tel" name="telNo" id="telNo" placeholder="Prénom">
-			<input type="email" name="email" id="email" placeholder="email">
-			<input type="text" name="postalCode" id="postalCode" placeholder="Date de Naissance">
+		<form id="contact-form">
+			<input type="text" name="name" id="name" placeholder="Nom et Prénom" autocomplete="name">
+			<input type="tel" name="telNo" id="telNo" placeholder="06 12 34 56 78" autocomplete="tel">
+			<input type="email" name="email" id="email" placeholder="email" autocomplete="email">
+			<input type="text" name="birthdate" id="birthdate" placeholder="Date de naissance (jj/mm/aaaa)">
 
-				<input type="checkbox" name="trialSession" id="trialSession" value="Yes">
-				<label for="trialSession">Je souhaite me pré-inscrire</label>
+				<input type="checkbox" name="inscription" id="inscription" value="Oui">
+				<label for="inscription">Je souhaite me pré-inscrire</label>
 			
-				<input type="checkbox" name="trialSession" id="trialSession" value="Yes">
+				<input type="checkbox" name="trialSession" id="trialSession" value="Oui">
 				<label for="trialSession">Je souhaite une séance d'essai</label>
 
 			<input type="submit" value="Envoyer">
@@ -133,8 +135,15 @@
 					<a href="contact.html" class="nav__link">Contactez-nous</a>
 				</li>
 			</ul>
+			<div class="social-container">
+				<a href="https://www.instagram.com/planetfitgym_castres/"><img src="./assets/icons/inconInsta.png" alt=""></a>
+				<a href="https://www.facebook.com/PlanetFitGymCastres"><img src="./assets/icons/iconFb.png" alt=""></a>
+			</div>
 		</div>
 		
+	</div>
+	<div class="mention">
+		<a href="">mentions légales</a>
 	</div>
 </footer>
 <script type="module" src="nav.js"></script>

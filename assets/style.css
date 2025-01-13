@@ -347,7 +347,7 @@ nav li:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 25em 8em;
+	margin: 25em 8em 15em 8em;
 	padding-bottom: 20px;
 }
 
@@ -360,7 +360,10 @@ nav li:hover {
 	#introduction {
 		flex-direction: column;
 		text-align: center;
-		margin: 25em 3em;
+		margin: 25em 3em 15em 3em;
+		border-left: none;
+		border-top: 2px solid #5271FF;
+		padding-top: 45px;
 	}
 	#introduction h1 {
 		margin-bottom: 30px;
@@ -369,6 +372,14 @@ nav li:hover {
 	#introduction p {
 		padding-left: 0;
 		font-size: 16px;
+	}
+	#introduction ul {
+		padding-left: 0;
+		text-align: start;
+		margin: 25px 15px 25px 15px;
+	}
+	#introduction li {
+		margin-bottom: 2px;
 	}
 }
 
@@ -464,7 +475,7 @@ input::placeholder, textarea::placeholder {
 	width: 100%;
 }
 
-#contact-form input, .loginInterface input {
+#contact-form input {
 	font-family: 'Archivo', sans-serif;
 	height: 50px;
 	font-size: 1.3em;
@@ -477,8 +488,8 @@ input::placeholder, textarea::placeholder {
 	border: none;
 }
 
-#contact-form input, #contact-form textarea, .loginInterface input {
-	margin: 2em 0 2em 0;
+#contact-form input, #contact-form textarea {
+	margin: 10px 0 10px 0;
 	max-width: 530px;
 	width: 100%;
 }
@@ -507,6 +518,20 @@ label {
 	font-size: 20px;
 }
 
+@media screen and (max-height: 725px) {
+	#contact-form input {
+		height: 25px;
+	}
+}
+
+@media screen and (max-height: 515px) {
+	#contact-form input {
+		margin-bottom: 6px;
+	}
+	.modalContainer {
+		padding: 0 10px 0 10px;
+	}
+}
 
 
 
@@ -595,6 +620,9 @@ footer ul li a:hover {
 footer div p {
 	text-align: center;
 }
+.social-container img {
+	width: 40px;
+}
 
 @media screen and (max-width: 900px) {
 	.footer {
@@ -629,14 +657,6 @@ footer div p {
 	}
 }
 
-/*"modifier" button for presentation picture*/
-#introduction figure a {
-	margin-top: 15px;
-}
-
-#introduction figure .faOpen {
-	margin-left: 0;
-}
 .intro ul {
 	list-style-type: disc; /* Remet les puces rondes par défaut */
             padding-left: 150px;
@@ -660,20 +680,24 @@ footer div p {
 }
 
 .modalContainer {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 80%;
-	justify-content: space-between;
+	height: 85vh;
+	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
 	background-color: black;
-	padding: 30px;
+	padding: 10px;
 }
 
-.modalStopIcon {
-	width: 100%;
-	display: flex;
-	justify-content: end;
+.modalContainer .modalStopIcon {
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	margin-top: 15px;
 }
 
 .fa-xmark {
@@ -682,111 +706,6 @@ footer div p {
 	cursor: pointer;
 }
 
-
-.modalContainer h2 {
-	font-family: "Work Sans";
-	font-weight: normal;
-	color: black;
-	font-size: 26px;
-	margin-top: 20px;
-}
-
-.modalGallery {
-	margin: 45px auto;
-	width: 420px;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	column-gap: 6px;
-	row-gap: 25px;
-}
-
-.modalGallery figure{
-	height: 120px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
-.modalGallery figure p {
-	font-family: "Work Sans";
-	font-weight: 400;
-	cursor: pointer;
-}
-
-.modalGallery figure img {
-	width: 100%;
-	height:120px;
-	object-fit:cover;
-}
-
-.modalGallery button{
-	display: flex;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	justify-content: center;
-	align-items: center;
-	box-sizing: border-box;
-	border: 1px solid black;
-	background-color: black;
-	border-radius: 2px;
-	height: 17px;
-	width: 17px;
-	gap: 5px;
-	cursor: pointer;
-}
-
-.modalGallery .arrowButton {
-	display: none;
-	right: 25px;
-}
-
-.modalGallery .arrowButton.active {
-	display:flex
-}
-
-.fa-trash-can {
-	color: white;
-	margin: auto;
-	font-size: 9px;
-}
-
-.fa-up-down-left-right {
-	color: white;
-	margin: auto;
-	font-size: 11px;
-}
-
-.modalLine {
-	width: 420px;
-	height: 1px;
-	background-color: #B3B3B3;
-	margin: 47px 0 38px 0;
-	border-radius: 10px;
-}
-
-.addWorkButton {
-	cursor: pointer;
-	border: none;
-	background-color: #1D6154;
-	border-radius: 60px;
-	width: 237px;
-	height: 36px;
-	color: white;
-	font-family: 'Syne';
-	font-size: 14px;
-	font-weight: 700;
-}
-
-.deleteGallery {
-	margin: 23px 0 18px 0;
-	font-style: normal;
-	font-weight: 400;
-	font-family: 'Syne';
-	font-size: 14px;
-	color: #D65353;
-	cursor: pointer;
-}
 
 /* Modals hidden by default */
 #firstModal {
@@ -884,38 +803,6 @@ footer div p {
 	margin-bottom: 25px;
 }
 
-/*login style*/
-.loginInterface {
-	display: flex;
-	flex-direction: column;
-	width: 33%;
-	margin: 150px auto 355px auto;
-}
-
-.loginInterface h2 {
-	margin-bottom: 9px;
-	text-align: center;
-}
-
-.loginInterface form {
-	text-align: left;
-	display: flex;
-	flex-direction: column;
-}
-
-.loginButton {
-	margin: 37px 0 28px 0;
-	height: 36px;
-	width: 179px;
-	font-size: 14px;
-	font-family: 'Archivo';
-	align-self:  center;
-	cursor: pointer;
-	border: none;
-	color: white;
-	background-color: #1b1b1b;
-	border-radius: 10px;
-}
 
 @media screen and (max-width:950px) {
 	.gallery {
@@ -1125,6 +1012,12 @@ figure:hover .fig-2 {
 		justify-content: center;
 		align-items: center;
 		margin: 100px 0 100px 0;
+		-webkit-user-select: none; /* Désactiver la sélection de texte */
+		-moz-user-select: none;    /* Pour Firefox */
+		-ms-user-select: none;     /* Pour les anciennes versions d'Internet Explorer */
+		user-select: none;         /* Propriété standard */
+		-webkit-touch-callout: none; /* Désactiver les menus contextuels */
+		-webkit-tap-highlight-color: transparent; /* Supprimer les surbrillances */
 	}
 	.activities-cards figure {
 		width: 40vw;
@@ -1396,74 +1289,16 @@ figure:hover .fig-2 {
 		font-size: 20px;
 	}
 }
-
-
-.modalPro {
-	display: none; /* Cachez la modale par défaut */
-	position: fixed; /* Reste en position fixe même si vous faites défiler la page */
-	z-index: 1; /* Mettez la modale au-dessus de tout le reste sur la page */
-	left: 0;
-	top: 0;
-	width: 100%; /* Largeur de la modale */
-	height: 100%; /* Hauteur de la modale */
-	overflow: auto; /* Ajoutez le défilement si nécessaire */
-	background-color: rgba(0,0,0,0.9); /* Faites en sorte que le fond soit semi-transparent */
-  }
-  
-  .modal-photo-content {
-	margin: auto;
-	display: block;
-	max-width: 600px; /* Largeur maximale de la modale */
-  }
-  
-  .close {
-	color: #fff;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-	color: #999;
-	text-decoration: none;
-	cursor: pointer;
-  }
-
-/*photo by project */
-
-.modalphoto {
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mention {
+	width: 50%;
+	font-size: 16px;
 }
 
-.modalphoto img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.previousProject {
-	display: flex;
-	flex-direction: row;
-	font-size: 30px;
-	font-weight: bold;
-	margin-left: 10vw;
-	margin-top: 30px;
-	text-align: initial;
-}
-
-.previousProject a {
-	text-decoration: none;
+.mention a {
+	padding: 5px 10px;
 	color: #FFFFFF;
+	text-decoration: none;
+
 }
 
 
